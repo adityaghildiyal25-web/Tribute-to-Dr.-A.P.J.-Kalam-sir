@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  background-color: #fff8e7;
+  color: #2c2c2c;
+  padding: 20px 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Sticky navigation with smooth offset */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  position: sticky;
+  top: 12px;
+  z-index: 1000;
+  margin-bottom: 24px;
+  background-color: #feedde;
+  padding: 12px 24px;
+  border: 2px solid #222;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #b14700;
+}
+
+/* Offset anchor scroll so sticky nav doesn't cover heading */
+.life, .intro, .books, .start {
+  scroll-margin-top: 80px;
+}
+
+header h3, header p {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.start {
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid #222;
+  background-color: #feedde;
+  border-radius: 60px;
+  padding: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.start:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.intro, .life, .books, .end, .references {
+  border: 2px solid #222;
+  background-color: #feedde;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.intro:hover, .life:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.life h2 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.life img,
+.intro .portrait {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid #222;
+  border-radius: 8px;
+  background-color: #ebd3be;
+  display: block;
+}
+
+.life img {
+  float: right;
+  margin: 0 0 16px 20px;
+}
+
+.intro .portrait {
+  float: left;
+  margin: 0 20px 16px 0;
+}
+
+.books ul {
+  padding-left: 24px;
+  margin-top: 10px;
+}
+
+.books ul li {
+  margin-bottom: 8px;
+}
+
+.references {
+  text-align: center;
+}
+
+.references ul {
+  list-style: none;
+  padding: 0;
+}
+
+.references ul li {
+  margin: 6px 0;
+}
+
+.references a, .end a {
+  color: #b14700;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 14px auto 0;
+}
+
+#feedback-text {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.submit-btn {
+  background-color: #b14700;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #8c3600;
+}
+
+@media (max-width: 700px) {
+  .life img,
+  .intro .portrait {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto 16px;
+  }
+
+  .start {
+    border-radius: 24px;
+  }
+
+  .navbar {
+    gap: 10px;
+    padding: 10px;
+  }
+}
